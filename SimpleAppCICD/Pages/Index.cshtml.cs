@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SimpleAppCICD.Pages
 {
+    [IgnoreAntiforgeryToken]
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
@@ -22,11 +23,13 @@ namespace SimpleAppCICD.Pages
         public void OnGet()
         {
             int a = 1;
+            int b = 7;
             if (a == 1)
             {
                 if (true)
                 {
-                    this.Text = "Text";
+                    if (b == 7)
+                        this.Text = "Text";
                 }
             }
         }
