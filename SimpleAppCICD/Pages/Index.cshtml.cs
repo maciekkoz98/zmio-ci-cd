@@ -12,6 +12,8 @@ namespace SimpleAppCICD.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
+        public string Text { get; set; }
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -19,7 +21,14 @@ namespace SimpleAppCICD.Pages
 
         public void OnGet()
         {
-
+            int a = 1;
+            if (a == 1)
+            {
+                if (true)
+                {
+                    this.Text = "Text";
+                }
+            }
         }
     }
 }
